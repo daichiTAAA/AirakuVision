@@ -1,0 +1,12 @@
+[submodule "ImageFlowCanvas"]
+	path = ImageFlowCanvas
+	url = https://github.com/daichiTAAA/ImageFlowCanvas.git
+[submodule "mediamtx"]
+	path = mediamtx
+	url = https://github.com/bluenviron/mediamtx.git
+[submodule "thinklet.app.developer"]
+	path = thinklet.app.developer
+	url = https://github.com/FairyDevicesRD/thinklet.app.developer.git
+[submodule "thinklet.app.sdk"]
+	path = thinklet.app.sdk
+	url = https://github.com/FairyDevicesRD/thinklet.app.sdk.git
