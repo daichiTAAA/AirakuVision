@@ -10,3 +10,9 @@
 [submodule "thinklet.app.sdk"]
 	path = thinklet.app.sdk
 	url = https://github.com/FairyDevicesRD/thinklet.app.sdk.git
+[submodule "minio"]
+	path = minio
+	url = https://github.com/minio/minio.git
+[submodule "opentelemetry.io"]
+	path = opentelemetry.io
+	url = https://github.com/open-telemetry/opentelemetry.io.git
