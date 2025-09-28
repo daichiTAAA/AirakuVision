@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram name="配信・記録層システム関連図" id="streaming-recording-system">
-        <mxGraphModel dx="1125" dy="645" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="849" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="thinklet-device" value="Thinklet装着型デバイス" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
+                <mxCell id="thinklet-device" value="装着型デバイス層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="80" y="160" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="mediamtx-cluster" value="MediaMTX Ingest Cluster&#xa;(2ノード構成)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1" parent="1" vertex="1">
@@ -25,17 +25,17 @@
                 <mxCell id="postgresql" value="PostgreSQL&#xa;(録画テーブル&#xa;統計テーブル)" style="cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10" parent="1" vertex="1">
                     <mxGeometry x="380" y="340" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="celery-worker" value="Celery Worker&lt;div&gt;(非同期転送)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11" vertex="1" parent="1">
+                <mxCell id="celery-worker" value="Celery Worker&lt;div&gt;(非同期転送)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11" parent="1" vertex="1">
                     <mxGeometry x="820" y="210" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="redis-broker" value="Redis&lt;div&gt;(Celeryブローカー)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10" vertex="1" parent="1">
+                <mxCell id="redis-broker" value="Redis&lt;div&gt;(Celeryブローカー)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10" parent="1" vertex="1">
                     <mxGeometry x="650" y="180" width="80" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="adls-storage" value="ADLS Storage Account&#xa;(cold-storage)&#xa;長期保管(1年)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="810" y="320" width="140" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="azure-databricks" value="Azure Databricks&#xa;(品質検証・統計処理)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11" parent="1" vertex="1">
-                    <mxGeometry x="590" y="330" width="140" height="60" as="geometry"/>
+                <mxCell id="opentelemetry" value="OpenTelemetry Collector&lt;div&gt;(メトリクス収集)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10" parent="1" vertex="1">
+                    <mxGeometry x="680" y="360" width="80" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="business-service" value="業務サービス層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="250" y="360" width="120" height="60" as="geometry"/>
@@ -96,18 +96,18 @@
                         <mxPoint x="-1" y="-12" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="edge15" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9673a6;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="fastapi-service" target="redis-broker">
+                <mxCell id="edge15" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9673a6;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="fastapi-service" target="redis-broker" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="edge15-label" value="Celeryタスク&#xa;キューイング" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" connectable="0" vertex="1" parent="edge15">
+                <mxCell id="edge15-label" value="Celeryタスク&#xa;キューイング" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="edge15" connectable="0" vertex="1">
                     <mxGeometry x="0.1" y="1" relative="1" as="geometry">
-                        <mxPoint x="6" y="4" as="offset"/>
+                        <mxPoint x="3" y="7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="edge16" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9673a6;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="redis-broker" target="celery-worker">
+                <mxCell id="edge16" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9673a6;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="redis-broker" target="celery-worker" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="edge16-label" value="タスク取得" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" connectable="0" vertex="1" parent="edge16">
+                <mxCell id="edge16-label" value="タスク取得" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="edge16" connectable="0" vertex="1">
                     <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -141,23 +141,22 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="edge10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#d79b00;dashed=1;" parent="1" source="azure-databricks" target="adls-storage" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge10-label" value="品質検証" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="edge10" vertex="1" connectable="0">
-                    <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
-                        <mxPoint as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="edge11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#d79b00;dashed=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="azure-databricks" target="fastapi-service" edge="1">
+                <mxCell id="edge-otel" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#9673a6;dashed=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;elbow=vertical;" parent="1" source="fastapi-service" target="opentelemetry" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="610" y="310"/>
-                            <mxPoint x="505" y="310"/>
+                            <mxPoint x="620" y="310"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="edge11-label" value="統計結果" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="edge11" vertex="1" connectable="0">
+                <mxCell id="edge-otel-label" value="メトリクス送信" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="edge-otel" connectable="0" vertex="1">
+                    <mxGeometry x="0.1" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge-otel-prometheus" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#9673a6;dashed=1;elbow=vertical;" parent="1" source="opentelemetry" target="prometheus" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge-otel-prometheus-label" value="メトリクス転送" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="edge-otel-prometheus" connectable="0" vertex="1">
                     <mxGeometry x="0.1" y="1" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
