@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram name="配信・記録層システム関連図" id="streaming-recording-system">
-        <mxGraphModel dx="1125" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="1054" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="thinklet-device" value="装着型デバイス層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="80" y="160" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="70" y="160" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="mediamtx-cluster" value="MediaMTX Ingest Cluster&#xa;(2ノード構成)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="290" y="71" width="160" height="80" as="geometry"/>
@@ -13,20 +13,23 @@
                 <mxCell id="load-balancer" value="負荷分散装置" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
                     <mxGeometry x="200" y="81" width="60" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="mediamtx-recorder" value="MediaMTX Recorder&#xa;(チャンク化)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+                <mxCell id="mediamtx-recorder" value="MediaMTX Recorder&#xa;(チャンク化)&#xa;ローカル24時間保持" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
                     <mxGeometry x="520" y="80" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="minio-cluster" value="MinIO Cluster&#xa;(hot-storage)&#xa;4ノード分散モード" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="720" y="71" width="140" height="80" as="geometry"/>
+                <mxCell id="rclone-sync" value="rclone sync&#xa;(複製・ハッシュ検証)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
+                    <mxGeometry x="740" y="80" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="fastapi-service" value="FastAPI Metadata Service&#xa;(メタデータ管理)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1" parent="1" vertex="1">
+                <mxCell id="minio-cluster" value="MinIO Cluster&#xa;(hot-storage)&#xa;4ノード分散モード" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="920" y="71" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="fastapi-service" value="FastAPI Metadata Service&#xa;(メタデータ管理)&#xa;署名付きURL発行" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="400" y="220" width="140" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="postgresql" value="PostgreSQL&#xa;(録画テーブル&#xa;統計テーブル)" style="cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
                     <mxGeometry x="395" y="334" width="80" height="56" as="geometry"/>
                 </mxCell>
-                <mxCell id="celery-worker" value="Celery Worker&lt;div&gt;(非同期転送)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
-                    <mxGeometry x="820" y="210" width="120" height="60" as="geometry"/>
+                <mxCell id="celery-worker" value="Celery Worker&lt;div&gt;(非同期転送)&lt;/div&gt;&lt;div&gt;同期状態監視&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
+                    <mxGeometry x="910" y="210" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="redis-broker" value="Redis&lt;div&gt;(Celeryブローカー)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" parent="1" vertex="1">
                     <mxGeometry x="650" y="180" width="80" height="60" as="geometry"/>
@@ -38,7 +41,7 @@
                     <mxGeometry x="535" y="350" width="130" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="business-service" value="業務サービス層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="220" y="260" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="200" y="260" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="thinklet-device" target="load-balancer" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -64,10 +67,18 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;" parent="1" source="mediamtx-recorder" target="minio-cluster" edge="1">
+                <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;" parent="1" source="mediamtx-recorder" target="rclone-sync" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="edge4-label" value="MP4チャンク&#xa;(S3互換API)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="edge4" vertex="1" connectable="0">
+                <mxCell id="edge4-label" value="ローカル書き込み" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="edge4" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;" edge="1" parent="1" source="rclone-sync" target="minio-cluster">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge4-2-label" value="複製・同期&#xa;(S3互換API)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" connectable="0" vertex="1" parent="edge4-2">
                     <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -114,6 +125,20 @@
                         <mxPoint x="8" y="-2" as="offset"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="edge7-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#4D4D4D;dashed=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;elbow=vertical;" edge="1" parent="1" source="celery-worker" target="rclone-sync">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="860" y="225"/>
+                            <mxPoint x="860" y="180"/>
+                            <mxPoint x="790" y="180"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge7-2-label" value="同期状態監視&#xa;ハッシュ検証" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" connectable="0" vertex="1" parent="edge7-2">
+                    <mxGeometry x="0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="2" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;" parent="1" source="celery-worker" target="adls-storage" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
@@ -143,7 +168,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="edge12-label" value="API連携&#xa;録画照会" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="edge12" vertex="1" connectable="0">
+                <mxCell id="edge12-label" value="API連携&#xa;録画照会&#xa;署名付きURL" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="edge12" vertex="1" connectable="0">
                     <mxGeometry x="0.1" y="1" relative="1" as="geometry">
                         <mxPoint y="-7" as="offset"/>
                     </mxGeometry>
@@ -152,7 +177,7 @@
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="320" y="240"/>
-                            <mxPoint x="140" y="240"/>
+                            <mxPoint x="130" y="240"/>
                         </Array>
                         <mxPoint x="130" y="280" as="targetPoint"/>
                     </mxGeometry>
@@ -162,13 +187,13 @@
                         <mxPoint x="70" y="-51" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="legend" value="【凡例】&lt;br&gt;━━ メインデータフロー&lt;br&gt;┅┅ 制御・通知フロー" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;align=left;verticalAlign=top;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="414" width="160" height="50" as="geometry"/>
+                <mxCell id="legend" value="【凡例】&lt;br&gt;━━ メインデータフロー&lt;br&gt;┅┅ 制御・通知フロー&lt;br&gt;※ ローカル24時間保持+MinIO同期方式" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="414" width="200" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="運用監視層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" vertex="1" parent="1">
+                <mxCell id="2" value="運用監視層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="540" y="419" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" edge="1" parent="1" source="fastapi-service" target="opentelemetry">
+                <mxCell id="4" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" parent="1" source="fastapi-service" target="opentelemetry" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="445" y="300" as="sourcePoint"/>
                         <mxPoint x="430" y="350" as="targetPoint"/>
@@ -177,35 +202,35 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="5" value="トレース、メトリクス、&lt;span style=&quot;color: rgb(63, 63, 63); background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;ログ送信&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" vertex="1" connectable="0" parent="4">
+                <mxCell id="5" value="トレース、メトリクス、&lt;span style=&quot;color: rgb(63, 63, 63); background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;ログ送信&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="4" vertex="1" connectable="0">
                     <mxGeometry x="0.2" y="1" relative="1" as="geometry">
                         <mxPoint x="22" y="21" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="6" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" edge="1" parent="1" source="opentelemetry" target="2">
+                <mxCell id="6" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" parent="1" source="opentelemetry" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="515" y="300" as="sourcePoint"/>
                         <mxPoint x="540" y="370" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="7" value="トレース、メトリクス、&lt;span style=&quot;color: rgb(63, 63, 63); background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;ログ送信&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" vertex="1" connectable="0" parent="6">
+                <mxCell id="7" value="トレース、メトリクス、&lt;span style=&quot;color: rgb(63, 63, 63); background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;ログ送信&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="6" vertex="1" connectable="0">
                     <mxGeometry x="0.2" y="1" relative="1" as="geometry">
                         <mxPoint x="-1" y="-13" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="8" value="分析・可視化層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="80" y="260" width="120" height="60" as="geometry"/>
+                <mxCell id="8" value="分析・可視化層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="70" y="260" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="データマネージメント層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" vertex="1" parent="1">
+                <mxCell id="9" value="データマネージメント層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="367.5" y="419" width="135" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" edge="1" parent="1" source="postgresql" target="9">
+                <mxCell id="10" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" parent="1" source="postgresql" target="9" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="610" y="390" as="sourcePoint"/>
                         <mxPoint x="610" y="424" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="11" value="メタデータ送信" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" vertex="1" connectable="0" parent="10">
+                <mxCell id="11" value="メタデータ送信" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="10" vertex="1" connectable="0">
                     <mxGeometry x="0.2" y="1" relative="1" as="geometry">
                         <mxPoint x="-1" y="-9" as="offset"/>
                     </mxGeometry>
