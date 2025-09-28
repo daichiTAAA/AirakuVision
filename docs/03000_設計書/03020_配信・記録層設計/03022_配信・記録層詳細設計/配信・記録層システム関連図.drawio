@@ -5,13 +5,13 @@
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="thinklet-device" value="装着型デバイス層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="70" y="160" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="70" y="170" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="mediamtx-cluster" value="MediaMTX Ingest Cluster&#xa;(2ノード構成)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="290" y="71" width="160" height="80" as="geometry"/>
+                    <mxGeometry x="250" y="71" width="160" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="load-balancer" value="負荷分散装置" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
-                    <mxGeometry x="200" y="81" width="60" height="60" as="geometry"/>
+                    <mxGeometry x="110" y="81" width="60" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="mediamtx-recorder" value="MediaMTX Recorder&#xa;(チャンク化)&#xa;ローカル24時間保持" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" parent="1" vertex="1">
                     <mxGeometry x="520" y="80" width="120" height="60" as="geometry"/>
@@ -43,17 +43,12 @@
                 <mxCell id="business-service" value="業務サービス層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="200" y="260" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="thinklet-device" target="load-balancer" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="140" y="110"/>
-                            <mxPoint x="200" y="110"/>
-                        </Array>
-                    </mxGeometry>
+                <mxCell id="edge1" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="thinklet-device" target="load-balancer" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="edge1-label" value="WHIP&#xa;ストリーム" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="edge1" vertex="1" connectable="0">
                     <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
-                        <mxPoint x="3" y="-1" as="offset"/>
+                        <mxPoint x="64" y="-47" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;" parent="1" source="load-balancer" target="mediamtx-cluster" edge="1">
@@ -64,7 +59,7 @@
                 </mxCell>
                 <mxCell id="edge3-label" value="ストリーム&#xa;転送" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="edge3" vertex="1" connectable="0">
                     <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
-                        <mxPoint as="offset"/>
+                        <mxPoint x="10" y="1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;" parent="1" source="mediamtx-recorder" target="rclone-sync" edge="1">
@@ -83,14 +78,14 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;jumpStyle=line;jumpSize=10;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mediamtx-recorder" target="fastapi-service" edge="1">
+                <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;jumpStyle=line;jumpSize=10;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mediamtx-recorder" target="fastapi-service" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="edge5-label" value="Webhook&#xa;録画イベント" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="edge5" vertex="1" connectable="0">
                     <mxGeometry x="0.1" y="1" relative="1" as="geometry">
-                        <mxPoint x="-10" y="-1" as="offset"/>
+                        <mxPoint x="5" y="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="edge6" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" parent="1" source="fastapi-service" target="postgresql" edge="1">
@@ -114,7 +109,7 @@
                 </mxCell>
                 <mxCell id="edge16-label" value="タスク取得" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="edge16" connectable="0" vertex="1">
                     <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
-                        <mxPoint as="offset"/>
+                        <mxPoint x="-2" y="5" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="edge7" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4D4D4D;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;elbow=vertical;" parent="1" source="celery-worker" target="minio-cluster" edge="1">
@@ -147,7 +142,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="edge8-2" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#4D4D4D;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="fastapi-service" target="adls-storage">
+                <mxCell id="edge8-2" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#4D4D4D;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="fastapi-service" target="adls-storage">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="680" y="320"/>
@@ -159,11 +154,24 @@
                         <mxPoint x="64" y="26" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="edge9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#4D4D4D;dashed=1;jumpStyle=line;jumpSize=10;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="celery-worker" target="fastapi-service" edge="1">
+                <mxCell id="edge8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#4D4D4D;dashed=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;jumpStyle=arc;" edge="1" parent="1" source="fastapi-service" target="minio-cluster">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="640" y="255"/>
-                            <mxPoint x="640" y="255"/>
+                            <mxPoint x="435" y="50"/>
+                            <mxPoint x="990" y="50"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge8-3-label" value="MinIO署名付きURL発行&#xa;短期保管データ再生" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" connectable="0" vertex="1" parent="edge8-3">
+                    <mxGeometry x="0.1" y="1" relative="1" as="geometry">
+                        <mxPoint x="35" y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#4D4D4D;dashed=1;jumpStyle=line;jumpSize=10;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="celery-worker" target="fastapi-service" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="810" y="255"/>
+                            <mxPoint x="810" y="273"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -199,8 +207,8 @@
                         <mxPoint x="70" y="-51" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="legend" value="【凡例】&lt;br&gt;━━ メインデータフロー&lt;br&gt;┅┅ 制御・通知フロー&lt;br&gt;※ ローカル24時間保持+MinIO同期方式&lt;br&gt;※ ADLS長期保管データ再生対応" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;align=left;verticalAlign=top;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="414" width="200" height="70" as="geometry"/>
+                <mxCell id="legend" value="【凡例】&lt;br&gt;━━ メインデータフロー&lt;br&gt;┅┅ 制御・通知フロー&lt;br&gt;━━ MinIO動画再生フロー（赤線）&lt;br&gt;※ ローカル24時間保持+MinIO同期方式&lt;br&gt;※ ADLS長期保管データ再生対応" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="414" width="210" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="運用監視層" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="540" y="419" width="120" height="60" as="geometry"/>
