@@ -1,0 +1,431 @@
+<mxfile host="app.diagrams.net" modified="2024-09-28T00:00:00.000Z" agent="5.0" etag="xxx" version="22.0.0">
+  <diagram name="運用監視層システム関連図" id="operating-monitoring-system">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- タイトル -->
+        <mxCell id="title" value="AirakuVision 運用監視層システム関連図" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1f497d;" vertex="1" parent="1">
+          <mxGeometry x="600" y="20" width="454" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 各システム層（データ送信元）-->
+        <mxCell id="device_layer" value="装着型デバイス層&#xa;- デバイス状態&#xa;- バッテリーレベル&#xa;- 配信品質" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="140" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="streaming_layer" value="配信・記録層&#xa;- ストリーム統計&#xa;- 録画処理状況&#xa;- ストレージ容量" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="240" y="120" width="140" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="business_layer" value="業務サービス層&#xa;- API応答時間&#xa;- DB接続状況&#xa;- 作業イベント処理" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="400" y="120" width="140" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="data_layer" value="データマネジメント層&#xa;- ETLジョブ状況&#xa;- バッチ処理時間&#xa;- データ整合性" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="560" y="120" width="140" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="analytics_layer" value="分析・可視化層&#xa;- ユーザーセッション&#xa;- 画面表示時間&#xa;- 分析処理負荷" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="720" y="120" width="140" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- OpenTelemetry Collector群 -->
+        <mxCell id="otel_collector1" value="OTel&#xa;Collector" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="110" y="230" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="otel_collector2" value="OTel&#xa;Collector" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="270" y="230" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="otel_collector3" value="OTel&#xa;Collector" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="430" y="230" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="otel_collector4" value="OTel&#xa;Collector" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="590" y="230" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="otel_collector5" value="OTel&#xa;Collector" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="750" y="230" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- OpenTelemetry Gateway（冗長構成）-->
+        <mxCell id="otel_gateway1" value="OpenTelemetry&#xa;Gateway #1&#xa;(OTLP受信)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="300" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="otel_gateway2" value="OpenTelemetry&#xa;Gateway #2&#xa;(OTLP受信)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="460" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="load_balancer" value="Load Balancer" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="380" y="280" width="120" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Kafkaクラスター -->
+        <mxCell id="kafka_cluster" value="Kafka Cluster&#xa;(テレメトリハブ)&#xa;&#xa;Topics:&#xa;• telemetry-metrics&#xa;• telemetry-traces&#xa;• telemetry-logs&#xa;• alerts-raw&#xa;• alerts-processed" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="320" y="430" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="kafka_node1" value="Kafka&#xa;Node #1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="330" y="480" width="60" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="kafka_node2" value="Kafka&#xa;Node #2" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="480" width="60" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="kafka_node3" value="Kafka&#xa;Node #3" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="470" y="480" width="60" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- 監視・分析システム群 -->
+        <!-- Prometheus -->
+        <mxCell id="prometheus_cluster" value="Prometheus Cluster&#xa;(メトリクス時系列DB)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="600" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="prometheus_primary" value="Primary" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="100" y="635" width="60" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="prometheus_secondary" value="Secondary" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="180" y="635" width="70" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Jaeger -->
+        <mxCell id="jaeger_cluster" value="Jaeger Cluster&#xa;(分散トレーシング)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="320" y="600" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="jaeger_collector" value="Collector" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="330" y="635" width="50" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="jaeger_query" value="Query" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="395" y="635" width="45" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="jaeger_agent" value="Agent" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="455" y="635" width="50" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Grafana -->
+        <mxCell id="grafana_cluster" value="Grafana Cluster&#xa;(統合ダッシュボード)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="560" y="600" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="grafana_node1" value="Node #1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="580" y="635" width="60" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="grafana_node2" value="Node #2" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="660" y="635" width="60" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Alertmanager -->
+        <mxCell id="alertmanager" value="Alertmanager Cluster&#xa;(アラート管理)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="720" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="alertmanager_node1" value="Node #1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="100" y="755" width="60" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="alertmanager_node2" value="Node #2" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="180" y="755" width="60" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- 外部システム・通知先 -->
+        <mxCell id="notification_systems" value="通知システム&#xa;&#xa;• Slack&#xa;• Email&#xa;• SMS&#xa;• 電話" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f0f0f0;strokeColor=#666666;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="840" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="operations_team" value="運用チーム&#xa;&#xa;• 24/365監視&#xa;• オンコール対応&#xa;• エスカレーション" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f0f0f0;strokeColor=#666666;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="240" y="840" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- データストレージ -->
+        <mxCell id="elasticsearch" value="Elasticsearch&#xa;(Jaegerデータ保存)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="340" y="720" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="postgresql" value="PostgreSQL&#xa;(Grafana共有DB)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="580" y="720" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- バックアップ・DR -->
+        <mxCell id="backup_systems" value="バックアップ・DR&#xa;&#xa;• Kafkaデータ&#xa;• Prometheusメトリクス&#xa;• Grafanaダッシュボード&#xa;• クロスリージョン同期" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#cdeb8b;strokeColor=#36af2d;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="800" y="600" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- セキュリティ・認証 -->
+        <mxCell id="security_layer" value="セキュリティ・認証層&#xa;&#xa;• SASL/SCRAM (Kafka)&#xa;• OAuth2 (Jaeger/Grafana)&#xa;• LDAP統合&#xa;• TLS暗号化" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#fad7ac;strokeColor=#b46504;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="320" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- 接続線（OTLP Protocol） -->
+        <mxCell id="edge1" edge="1" parent="1" source="device_layer" target="otel_collector1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge2" edge="1" parent="1" source="streaming_layer" target="otel_collector2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge3" edge="1" parent="1" source="business_layer" target="otel_collector3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge4" edge="1" parent="1" source="data_layer" target="otel_collector4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="630" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge5" edge="1" parent="1" source="analytics_layer" target="otel_collector5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Collector -> Load Balancer -->
+        <mxCell id="edge6" edge="1" parent="1" source="otel_collector1" target="load_balancer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge7" edge="1" parent="1" source="otel_collector2" target="load_balancer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge8" edge="1" parent="1" source="otel_collector3" target="load_balancer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge9" edge="1" parent="1" source="otel_collector4" target="load_balancer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge10" edge="1" parent="1" source="otel_collector5" target="load_balancer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Load Balancer -> Gateways -->
+        <mxCell id="edge11" edge="1" parent="1" source="load_balancer" target="otel_gateway1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge12" edge="1" parent="1" source="load_balancer" target="otel_gateway2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Gateways -> Kafka -->
+        <mxCell id="edge13" edge="1" parent="1" source="otel_gateway1" target="kafka_cluster">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge14" edge="1" parent="1" source="otel_gateway2" target="kafka_cluster">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Kafka -> 監視システム群 -->
+        <mxCell id="edge15" edge="1" parent="1" source="kafka_cluster" target="prometheus_cluster">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="580" />
+              <mxPoint x="180" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge16" edge="1" parent="1" source="kafka_cluster" target="jaeger_cluster">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Prometheus -> Alertmanager -->
+        <mxCell id="edge17" edge="1" parent="1" source="prometheus_cluster" target="alertmanager">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Alertmanager -> 通知システム -->
+        <mxCell id="edge18" edge="1" parent="1" source="alertmanager" target="notification_systems">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge19" edge="1" parent="1" source="alertmanager" target="operations_team">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="830" />
+              <mxPoint x="280" y="830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- データストレージ接続 -->
+        <mxCell id="edge20" edge="1" parent="1" source="jaeger_cluster" target="elasticsearch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge21" edge="1" parent="1" source="grafana_cluster" target="postgresql">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Grafana -> データソース -->
+        <mxCell id="edge22" edge="1" parent="1" source="prometheus_cluster" target="grafana_cluster">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="580" />
+              <mxPoint x="560" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge23" edge="1" parent="1" source="jaeger_cluster" target="grafana_cluster">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- バックアップ接続 -->
+        <mxCell id="edge24" edge="1" parent="1" source="kafka_cluster" target="backup_systems">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="490" />
+              <mxPoint x="880" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge25" edge="1" parent="1" source="prometheus_cluster" target="backup_systems">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="660" />
+              <mxPoint x="800" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge26" edge="1" parent="1" source="grafana_cluster" target="backup_systems">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- セキュリティ接続（点線で表現） -->
+        <mxCell id="edge27" edge="1" parent="1" source="security_layer" target="kafka_cluster" style="dashed=1;dashPattern=5 5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="420" />
+              <mxPoint x="640" y="420" />
+              <mxPoint x="640" y="490" />
+              <mxPoint x="520" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge28" edge="1" parent="1" source="security_layer" target="grafana_cluster" style="dashed=1;dashPattern=5 5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="420" />
+              <mxPoint x="760" y="420" />
+              <mxPoint x="760" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge29" edge="1" parent="1" source="security_layer" target="jaeger_cluster" style="dashed=1;dashPattern=5 5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="420" />
+              <mxPoint x="640" y="420" />
+              <mxPoint x="640" y="580" />
+              <mxPoint x="520" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- データフロー凡例 -->
+        <mxCell id="legend_title" value="データフロー凡例" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="460" width="120" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend_otlp" value="OTLP Protocol" style="text;html=1;strokeColor=#666666;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="490" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend_kafka" value="Kafka Topics" style="text;html=1;strokeColor=#666666;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="510" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend_metrics" value="Metrics/Traces" style="text;html=1;strokeColor=#666666;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="530" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend_alerts" value="Alerts/Notifications" style="text;html=1;strokeColor=#666666;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="550" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend_security" value="Security (TLS/Auth)" style="text;html=1;strokeColor=#666666;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;dashed=1;dashPattern=5 5;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="570" width="120" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- 実線凡例 -->
+        <mxCell id="legend_line1" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="500" as="sourcePoint" />
+            <mxPoint x="1015" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="legend_line2" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="520" as="sourcePoint" />
+            <mxPoint x="1015" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="legend_line3" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="540" as="sourcePoint" />
+            <mxPoint x="1015" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="legend_line4" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="560" as="sourcePoint" />
+            <mxPoint x="1015" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 点線凡例 -->
+        <mxCell id="legend_line5" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#666666;dashed=1;dashPattern=5 5;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="580" as="sourcePoint" />
+            <mxPoint x="1015" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
