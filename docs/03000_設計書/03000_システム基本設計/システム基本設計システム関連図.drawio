@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="C5RBs43oDa-KdzZeNtuy" name="システム関連図">
-        <mxGraphModel dx="1061" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#FFFFFF" math="0" shadow="0">
+        <mxGraphModel dx="796" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#FFFFFF" math="0" shadow="0">
             <root>
                 <mxCell id="WIyWlLk6GJQsqaUBKTNV-0"/>
                 <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0"/>
@@ -88,7 +88,7 @@
                 <mxCell id="privacy-zone" value="プライバシーゾーン検知&#xa;・入退室検知&#xa;・配信停止/再開制御" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff0000;" parent="privacy" vertex="1">
                     <mxGeometry x="20" y="30" width="240" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="ops" value="運用監視" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=1;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#0066cc;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                <mxCell id="ops" value="運用監視層" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=1;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#0066cc;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
                     <mxGeometry x="690" y="40" width="400" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="monitoring" value="システム監視・ログ管理・パフォーマンス監視・バックアップ・復旧" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#0066cc;" parent="ops" vertex="1">
