@@ -5,7 +5,7 @@
                 <mxCell id="WIyWlLk6GJQsqaUBKTNV-0"/>
                 <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0"/>
                 <mxCell id="0" value="" style="whiteSpace=wrap;html=1;fillColor=#E6E6E6;fontColor=#333333;strokeColor=#000000;opacity=50;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-                    <mxGeometry x="30" y="183" width="1090" height="577" as="geometry"/>
+                    <mxGeometry x="30" y="183" width="1120" height="577" as="geometry"/>
                 </mxCell>
                 <mxCell id="device-layer" value="装着型デバイス層" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=1;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
                     <mxGeometry x="50" y="223" width="200" height="120" as="geometry"/>
@@ -160,6 +160,18 @@
                 </mxCell>
                 <mxCell id="title" value="AirakuVision システム関連図" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
                     <mxGeometry x="440" y="10" width="280" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="1" value="テレメトリー" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#ff6666;jumpStyle=arc;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ops" target="ui-layer">
+                    <mxGeometry x="-0.7025" relative="1" as="geometry">
+                        <mxPoint x="1040" y="480" as="sourcePoint"/>
+                        <mxPoint x="1160" y="520" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="990" y="160"/>
+                            <mxPoint x="1130" y="160"/>
+                            <mxPoint x="1130" y="563"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>
