@@ -1,17 +1,20 @@
 <mxfile host="65bd71144e">
     <diagram id="C5RBs43oDa-KdzZeNtuy" name="システム関連図">
-        <mxGraphModel dx="1030" dy="1457" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#FFFFFF" math="0" shadow="0">
+        <mxGraphModel dx="1061" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#FFFFFF" math="0" shadow="0">
             <root>
                 <mxCell id="WIyWlLk6GJQsqaUBKTNV-0"/>
                 <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0"/>
+                <mxCell id="0" value="" style="whiteSpace=wrap;html=1;fillColor=#E6E6E6;fontColor=#333333;strokeColor=#000000;opacity=50;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+                    <mxGeometry x="30" y="183" width="1090" height="577" as="geometry"/>
+                </mxCell>
                 <mxCell id="device-layer" value="装着型デバイス層" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=1;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-                    <mxGeometry x="40" y="40" width="200" height="120" as="geometry"/>
+                    <mxGeometry x="50" y="223" width="200" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="thinklet-device" value="Thinkletデバイス&#xa;・一人称映像取得&#xa;・音声コマンド入力&#xa;・ビームフォーミング" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="device-layer" vertex="1">
                     <mxGeometry x="10" y="30" width="180" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="stream-layer" value="配信・記録層" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=1;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-                    <mxGeometry x="320" y="80" width="280" height="180" as="geometry"/>
+                    <mxGeometry x="330" y="263" width="280" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="mediamtx" value="MediaMTX&#xa;・WHIP受信&#xa;・WHEP配信&#xa;・録画機能" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="stream-layer" vertex="1">
                     <mxGeometry x="10" y="30" width="120" height="70" as="geometry"/>
@@ -23,25 +26,25 @@
                     <mxGeometry x="80" y="110" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="business-layer" value="業務サービス層" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=1;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-                    <mxGeometry x="680" y="40" width="400" height="240" as="geometry"/>
+                    <mxGeometry x="708" y="223" width="400" height="240" as="geometry"/>
                 </mxCell>
-                <mxCell id="work-events-api" value="/v1/work-events&#xa;・開始/終了/中断/再開&#xa;・イベント登録" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="business-layer" vertex="1">
+                <mxCell id="work-events-api" value="/v1/work-events&#xa;・開始/終了/中断/再開&#xa;・イベント登録" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;" parent="business-layer" vertex="1">
                     <mxGeometry x="10" y="30" width="180" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="device-status-api" value="/v1/devices/{id}/status&#xa;・端末状態管理&#xa;・次期待月連番" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="business-layer" vertex="1">
+                <mxCell id="device-status-api" value="/v1/devices/{id}/status&#xa;・端末状態管理&#xa;・次期待月連番" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;" parent="business-layer" vertex="1">
                     <mxGeometry x="210" y="30" width="180" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="month-serial-api" value="/v1/devices/{id}/month-serial:set&#xa;・月連番上書き&#xa;・順序リスト照合" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="business-layer" vertex="1">
+                <mxCell id="month-serial-api" value="/v1/devices/{id}/month-serial:set&#xa;・月連番上書き&#xa;・順序リスト照合" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;" parent="business-layer" vertex="1">
                     <mxGeometry x="10" y="100" width="180" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="workflow-mgmt" value="ワークフロー管理&#xa;・生産順序リスト&#xa;・工程情報管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="business-layer" vertex="1">
+                <mxCell id="workflow-mgmt" value="ワークフロー管理&#xa;・生産順序リスト&#xa;・工程情報管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;" parent="business-layer" vertex="1">
                     <mxGeometry x="210" y="100" width="180" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="notification" value="運用監視機能&#xa;・アラート発報&#xa;・フェイルオーバー" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff6666;" parent="business-layer" vertex="1">
                     <mxGeometry x="110" y="170" width="180" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="data-layer" value="データマネジメント層" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=1;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-                    <mxGeometry x="40" y="320" width="560" height="180" as="geometry"/>
+                    <mxGeometry x="50" y="503" width="560" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="event-db" value="イベントDB&#xa;・作業イベントログ&#xa;・端末状態履歴" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="data-layer" vertex="1">
                     <mxGeometry x="20" y="30" width="120" height="70" as="geometry"/>
@@ -59,7 +62,7 @@
                     <mxGeometry x="220" y="120" width="120" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="ui-layer" value="分析・可視化層" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=1;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-                    <mxGeometry x="680" y="320" width="400" height="240" as="geometry"/>
+                    <mxGeometry x="708" y="503" width="400" height="240" as="geometry"/>
                 </mxCell>
                 <mxCell id="analysis-ui" value="要素作業分析UI&#xa;・録画映像再生&#xa;・候補区間提示&#xa;・ラベル修正" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="ui-layer" vertex="1">
                     <mxGeometry x="20" y="30" width="160" height="80" as="geometry"/>
@@ -74,19 +77,19 @@
                     <mxGeometry x="200" y="130" width="180" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="external" value="外部システム" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=1;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-                    <mxGeometry x="40" y="-110" width="200" height="100" as="geometry"/>
+                    <mxGeometry x="50" y="40" width="200" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="factory-network" value="工場ネットワーク&#xa;・現場接続&#xa;・帯域制御" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="external" vertex="1">
                     <mxGeometry x="20" y="30" width="160" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="privacy" value="プライバシー制御" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=1;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff0000;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-                    <mxGeometry x="320" y="-110" width="280" height="100" as="geometry"/>
+                    <mxGeometry x="40" y="380" width="280" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="privacy-zone" value="プライバシーゾーン検知&#xa;・入退室検知&#xa;・配信停止/再開制御" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff0000;" parent="privacy" vertex="1">
                     <mxGeometry x="20" y="30" width="240" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="ops" value="運用監視" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=1;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#0066cc;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-                    <mxGeometry x="680" y="-110" width="400" height="100" as="geometry"/>
+                    <mxGeometry x="690" y="40" width="400" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="monitoring" value="システム監視・ログ管理・パフォーマンス監視・バックアップ・復旧" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#0066cc;" parent="ops" vertex="1">
                     <mxGeometry x="20" y="30" width="360" height="60" as="geometry"/>
@@ -97,10 +100,10 @@
                 <mxCell id="flow2" value="音声コマンド&#xa;作業イベント" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d79b00;jumpStyle=arc;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.054;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="thinklet-device" target="business-layer" edge="1">
                     <mxGeometry x="0.6161" relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="260" y="90"/>
-                            <mxPoint x="260" y="30"/>
-                            <mxPoint x="650" y="30"/>
-                            <mxPoint x="650" y="53"/>
+                            <mxPoint x="270" y="273"/>
+                            <mxPoint x="270" y="213"/>
+                            <mxPoint x="660" y="213"/>
+                            <mxPoint x="660" y="236"/>
                         </Array>
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -111,8 +114,8 @@
                 <mxCell id="flow4" value="イベントログ&#xa;工程情報" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9673a6;jumpStyle=arc;exitX=0;exitY=0.8;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="business-layer" target="data-layer" edge="1">
                     <mxGeometry x="0.0626" y="-10" relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="620" y="232"/>
-                            <mxPoint x="620" y="374"/>
+                            <mxPoint x="630" y="415"/>
+                            <mxPoint x="630" y="557"/>
                         </Array>
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -124,39 +127,39 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="flow7" value="HLS録画配信&lt;div&gt;WHEP&lt;br&gt;リアルタイム配信&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82b366;jumpStyle=arc;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="stream-layer" target="ui-layer" edge="1">
-                    <mxGeometry x="-0.2321" y="-10" relative="1" as="geometry">
+                    <mxGeometry x="-0.2937" relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="650" y="134"/>
-                            <mxPoint x="650" y="356"/>
+                            <mxPoint x="660" y="317"/>
+                            <mxPoint x="660" y="539"/>
                         </Array>
-                        <mxPoint as="offset"/>
+                        <mxPoint y="1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="flow8" value="状態監視&#xa;アラート" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#ff6666;jumpStyle=arc;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="business-layer" target="ui-layer" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="flow9" value="制御信号" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#ff0000;dashed=1;jumpStyle=arc;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="privacy" target="stream-layer" edge="1">
-                    <mxGeometry x="-0.5556" relative="1" as="geometry">
+                <mxCell id="flow9" value="制御信号" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#ff0000;dashed=1;jumpStyle=arc;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="privacy" target="device-layer" edge="1">
+                    <mxGeometry x="-0.6" relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="460" y="20"/>
-                            <mxPoint x="460" y="20"/>
+                            <mxPoint x="180" y="360"/>
+                            <mxPoint x="150" y="360"/>
                         </Array>
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="flow10" value="ネットワーク接続" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#666666;dashed=1;jumpStyle=arc;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="external" target="device-layer" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                    <mxGeometry x="-0.4545" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="flow11" value="監視・ログ収集" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#0066cc;dashed=1;jumpStyle=arc;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ops" target="business-layer" edge="1">
+                <mxCell id="flow11" value="監視・ログ収集" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#0066cc;dashed=1;jumpStyle=arc;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.791;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ops" target="0" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="880"/>
-                            <mxPoint x="880"/>
-                        </Array>
+                        <Array as="points"/>
+                        <mxPoint x="890" y="143" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="title" value="AirakuVision システム関連図" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-                    <mxGeometry x="430" y="-140" width="280" height="20" as="geometry"/>
+                    <mxGeometry x="440" y="10" width="280" height="20" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
