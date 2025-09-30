@@ -1,0 +1,385 @@
+<mxfile host="65bd71144e">
+    <diagram name="ワイヤーフレーム" id="wireframe-diagram">
+        <mxGraphModel dx="1054" dy="495" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2340" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="分析可視化層 ワイヤーフレーム" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1400" y="40" width="400" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-monitor-frame" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="120" width="900" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-monitor-title" value="ライブ監視ダッシュボード（現場監督者向け）" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="120" width="900" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-header" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="180" width="860" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-line-select" value="ライン選択" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="190" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-time" value="2025/09/30 14:30:45" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="190" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-alert" value="🔴 アラート (2件)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#f44336;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="190" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-device-list" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="260" width="400" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-device-header" value="アクティブ端末一覧" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="260" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-item1" value="端末A-001 | 田中太郎 | 実行中 | 14:25" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fillColor=#e8f5e8;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="300" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-item2" value="端末B-002 | 佐藤花子 | 中断中 | 14:20" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fillColor=#fff3e0;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="330" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-item3" value="端末C-003 | 山田次郎 | 待機中 | 14:15" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="360" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-video" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="260" width="440" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-video-header" value="ライブ映像 - 端末A-001" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fillColor=#ffffff;strokeColor=none;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="270" width="440" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="video-placeholder" value="📹 Live Video Stream" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="380" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="latency-info" value="遅延: 0.8秒" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fillColor=#4caf50;strokeColor=none;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="860" y="530" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-event-log" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="580" width="400" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-event-header" value="リアルタイムイベントログ" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="580" width="400" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="event1" value="14:30 端末A-001 開始 123" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="610" width="380" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="event2" value="14:25 端末B-002 中断 122" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="630" width="380" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-stats" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="580" width="440" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-stats-header" value="統計サマリ" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="580" width="440" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="stats-content" value="稼働端末数: 12/15    配信異常: 1件    イベント異常: 2件" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="620" width="400" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-monitor-frame" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="120" width="900" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-monitor-title" value="作業イベント監視UI（現場監督者向け）" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="120" width="900" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-filter" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="180" width="860" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="filter-period" value="期間" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="190" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="filter-line" value="ライン" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1160" y="190" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="filter-device" value="端末" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1260" y="190" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="filter-status" value="ステータス" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1360" y="190" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="filter-search" value="🔍 検索" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;strokeColor=#1976d2;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1480" y="190" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-table" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="260" width="600" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-table-header" value="タイムスタンプ | 端末名 | 種別 | 月連番 | 信頼度 | ステータス | アクション" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="260" width="600" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-row1" value="14:30:45 | A-001 | 開始 | 123 | 95% | 確認済 | [詳細]" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fillColor=#e8f5e8;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="300" width="580" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-row2" value="14:25:12 | B-002 | 中断 | 122 | 87% | 要確認 | [承認]" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fillColor=#fff3e0;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="330" width="580" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-row3" value="14:20:33 | C-003 | 終了 | 121 | 78% | エラー | [修正]" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fillColor=#ffebee;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="360" width="580" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-detail" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1660" y="260" width="240" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-detail-header" value="イベント詳細" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1660" y="260" width="240" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="detail-content" value="発話テキスト:&#xa;「ブライトレッド開始123」&#xa;&#xa;工程情報:&#xa;組立ライン1-A&#xa;&#xa;認識信頼度: 95%&#xa;&#xa;中断理由:&#xa;部材補充のため" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1670" y="300" width="220" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-bottom" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="600" width="860" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="pagination" value="← 前へ | 1 2 3 4 5 | 次へ →" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="620" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="export-btn" value="📊 エクスポート" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#388e3c;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1500" y="620" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="bulk-approve" value="一括承認" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ff9800;strokeColor=#f57c00;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1640" y="620" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="analysis-frame" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="2000" y="120" width="1200" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="analysis-title" value="要素作業分析UI（分析担当者向け）" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fillColor=#f3e5f5;strokeColor=#4a148c;" parent="1" vertex="1">
+                    <mxGeometry x="2000" y="120" width="1200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="video-player" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2020" y="180" width="800" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="video-controls" value="⏮ ⏯ ⏭ | 1x | ⟲ | 00:15:30 / 01:45:20" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fillColor=#333333;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2020" y="450" width="800" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="ai-candidates" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2840" y="180" width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="ai-candidates-header" value="AI候補区間" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#f3e5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2840" y="180" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="candidate1" value="15:30-15:45&#xa;取付作業&#xa;信頼度: 92%&#xa;[承認] [修正]" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fillColor=#e8f5e8;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2850" y="210" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="candidate2" value="16:00-16:20&#xa;検査作業&#xa;信頼度: 87%&#xa;[承認] [修正]" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fillColor=#fff3e0;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2850" y="270" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="timeline" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2020" y="500" width="800" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="timeline-header" value="タイムライン" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="510" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="timeline-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="540" width="780" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-segment1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="2130" y="540" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-segment2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ff9800;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="2280" y="540" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="timeline-labels" value="取付作業 | 検査作業 | ..." style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="570" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="edit-form" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2840" y="500" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="edit-form-header" value="ラベル編集" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#f3e5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2840" y="500" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="edit-category" value="カテゴリ:&#xa;[取付作業 ▼]" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="2850" y="530" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edit-tags" value="タグ:&#xa;#手作業 #品質確認" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="2850" y="570" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="edit-memo" value="備考:&#xa;標準時間より遅延" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="2850" y="610" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="save-btn" value="💾 保存" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#388e3c;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2850" y="650" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cancel-btn" value="❌ キャンセル" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f44336;strokeColor=#d32f2f;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2940" y="650" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-mgmt-frame" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="760" width="900" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-mgmt-title" value="端末管理UI（運用管理者向け）" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="760" width="900" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-toolbar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="820" width="860" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="new-device-btn" value="➕ 新規端末登録" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#388e3c;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="830" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="import-btn" value="📤 一括インポート" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;strokeColor=#1976d2;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="830" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-search" value="🔍 検索フィルタ..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="830" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-table" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="900" width="600" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-table-header" value="端末ID | 端末名 | ライン | 状態 | 最終同期 | アクション" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="900" width="600" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-row1" value="A-001 | Bright-Red | ライン1 | オンライン | 14:30 | [編集][削除]" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fillColor=#e8f5e8;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="940" width="580" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-row2" value="B-002 | Blue-Star | ライン2 | オフライン | 13:45 | [編集][削除]" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fillColor=#ffebee;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="970" width="580" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-row3" value="C-003 | Green-Max | ライン1 | 待機中 | 14:15 | [編集][削除]" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fillColor=#fff3e0;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="1000" width="580" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-detail-panel" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="900" width="240" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-detail-header" value="端末詳細設定" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#e8f5e8;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="900" width="240" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-config" value="端末名: Bright-Red&#xa;&#xa;所属ライン: ライン1&#xa;&#xa;許可音声コマンド:&#xa;☑ 開始&#xa;☑ 終了&#xa;☑ 中断&#xa;☑ 再開&#xa;&#xa;プライバシーゾーン:&#xa;エリアA, エリアB&#xa;&#xa;バッテリー状態: 85%&#xa;連続稼働時間: 6.5時間" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="940" width="220" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-bottom" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="1240" width="860" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-stats" value="総端末数: 15 | オンライン: 12 | オフライン: 2 | メンテナンス: 1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="1260" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="sync-btn" value="🔄 一括同期" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ff9800;strokeColor=#f57c00;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="1300" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="export-device-btn" value="📊 データ出力" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9c27b0;strokeColor=#7b1fa2;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="1300" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="ops-dashboard-frame" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="760" width="900" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="ops-dashboard-title" value="運用管理ダッシュボード（運用管理者向け）" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="760" width="900" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="ops-header" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="820" width="860" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="system-status" value="🟢 システム正常" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fillColor=#4caf50;strokeColor=none;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="830" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="alert-count" value="⚠️ 重要アラート: 2件" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fillColor=#ff9800;strokeColor=none;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1700" y="830" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="metrics-device" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="900" width="400" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="metrics-device-title" value="端末接続状況" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#e8f5e8;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="900" width="400" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-metrics" value="接続数: 12/15&#xa;オフライン: 2台&#xa;バッテリー低下: 1台&#xa;&#xa;📊 [グラフ表示エリア]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="930" width="360" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="metrics-stream" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1480" y="900" width="420" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="metrics-stream-title" value="配信・録画状況" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#e8f5e8;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1480" y="900" width="420" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="stream-metrics" value="アクティブストリーム: 12&#xa;平均遅延: 0.8秒&#xa;エラー率: 0.5%&#xa;&#xa;📈 [遅延グラフエリア]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1500" y="930" width="380" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="metrics-storage" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="1070" width="400" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="metrics-storage-title" value="ストレージ利用量" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#e8f5e8;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="1070" width="400" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="storage-metrics" value="使用容量: 2.5TB / 10TB&#xa;録画ファイル数: 1,245件&#xa;予測残存期間: 45日&#xa;&#xa;💾 [容量グラフエリア]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="1100" width="360" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="metrics-resource" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1480" y="1070" width="420" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="metrics-resource-title" value="システムリソース" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#e8f5e8;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1480" y="1070" width="420" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="resource-metrics" value="CPU使用率: 45%&#xa;メモリ使用率: 67%&#xa;ネットワーク: 180Mbps&#xa;&#xa;⚡ [リソースグラフエリア]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1500" y="1100" width="380" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="ops-bottom" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="1240" width="860" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="recent-alerts" value="最新アラート履歴:&#xa;14:25 配信遅延発生 (端末B-002)&#xa;13:50 ストレージ使用量 警告レベル到達" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="1250" width="400" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="maintenance-schedule" value="メンテナンス予定:&#xa;10/05 23:00-01:00 定期メンテナンス" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1500" y="1250" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-frame" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="2000" y="760" width="1200" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-title" value="監査ログ閲覧UI（運用管理者向け）" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" parent="1" vertex="1">
+                    <mxGeometry x="2000" y="760" width="1200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-filter" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2020" y="820" width="1160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-period" value="期間:&#xa;2025/09/01 - 2025/09/30" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="2040" y="830" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-user" value="ユーザー:&#xa;[全ユーザー ▼]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="2200" y="830" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-operation" value="操作種別:&#xa;[全操作 ▼]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="2340" y="830" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-resource" value="対象リソース:&#xa;[全リソース ▼]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="2480" y="830" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-search-btn" value="🔍 検索実行" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#388e3c;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2640" y="840" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-export" value="📊 ログ出力" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ff9800;strokeColor=#f57c00;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2760" y="840" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-table" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2020" y="920" width="800" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-table-header" value="タイムスタンプ | ユーザー | 操作 | 対象 | IPアドレス | 結果" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2020" y="920" width="800" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-row1" value="14:30:45 | admin@example.com | 権限変更 | ユーザーA | 192.168.1.10 | 成功" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fillColor=#e8f5e8;" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="960" width="780" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-row2" value="14:25:12 | user@example.com | 映像閲覧 | 録画123 | 192.168.1.15 | 成功" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fillColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="990" width="780" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-row3" value="14:20:33 | analyst@example.com | データ修正 | ラベル456 | 192.168.1.20 | 成功" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fillColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="1020" width="780" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-row4" value="14:15:00 | unknown | ログイン試行 | システム | 203.0.113.50 | 失敗" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fillColor=#ffebee;" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="1050" width="780" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-detail" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2840" y="920" width="340" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-detail-header" value="ログ詳細情報" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#e8f5e8;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2840" y="920" width="340" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-detail-content" value="セッションID: sess_abc123456&#xa;&#xa;ユーザーエージェント:&#xa;Mozilla/5.0 (Macintosh; Intel Mac OS X)&#xa;&#xa;リクエストID: req_789012345&#xa;&#xa;変更前の値:&#xa;role: user&#xa;&#xa;変更後の値:&#xa;role: analyst&#xa;&#xa;承認者: supervisor@example.com&#xa;&#xa;理由:&#xa;分析業務担当のため権限昇格" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="2850" y="960" width="320" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-bottom" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="2020" y="1260" width="1160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-pagination" value="← 前へ | 1 2 3 4 5 | 次へ →" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="2200" y="1280" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-summary" value="検索結果: 1,245件 (危険度: 高3件, 中12件, 低1,230件)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="2040" y="1280" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="alert-settings" value="⚙️ アラート設定" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9c27b0;strokeColor=#7b1fa2;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="2600" y="1280" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="wireframe-notes" value="ワイヤーフレームの特徴&#xa;&#xa;• 各画面は設計書のレイアウト構成に準拠&#xa;• ロール別に色分け（現場監督者: 青、分析担当者: 紫、運用管理者: 緑）&#xa;• 実際のデータとUIコンポーネントを想定した詳細レイアウト&#xa;• レスポンシブ対応とアクセシビリティを考慮&#xa;• 高コントラスト表示に対応した配色設計" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="1400" width="320" height="140" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

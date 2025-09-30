@@ -1,0 +1,235 @@
+<mxfile host="65bd71144e">
+    <diagram name="画面遷移図" id="screen-transition-diagram">
+        <mxGraphModel dx="748" dy="495" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="分析可視化層 画面遷移図" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="40" width="300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="100" width="280" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-title" value="凡例" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="110" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-supervisor" value="■ 現場監督者" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="140" width="100" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-analyst" value="■ 分析担当者" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fillColor=#f3e5f5;strokeColor=#4a148c;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="170" width="100" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-admin" value="■ 運用管理者" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fillColor=#e8f5e8;strokeColor=#2e7d32;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="200" width="100" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-shared" value="■ 共通画面" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fillColor=#fff3e0;strokeColor=#e65100;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="230" width="100" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="login" value="ログイン画面&#xa;(認証・ロール判定)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="120" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="supervisor-area" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=3;opacity=30;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="280" width="480" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="supervisor-label" value="現場監督者エリア" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="290" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="live-monitor" value="ライブ監視&#xa;ダッシュボード&#xa;&#xa;・端末一覧&#xa;・ライブ映像&#xa;・リアルタイムログ&#xa;・統計サマリ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="340" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-monitor" value="作業イベント&#xa;監視UI&#xa;&#xa;・イベント一覧&#xa;・詳細情報&#xa;・承認/修正&#xa;・エクスポート" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="340" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="supervisor-report" value="現場監督者向け&#xa;レポート画面&#xa;&#xa;・作業実績&#xa;・異常統計&#xa;・チーム分析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="520" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="analyst-area" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;strokeWidth=3;opacity=30;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="280" width="480" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="analyst-label" value="分析担当者エリア" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fillColor=#f3e5f5;strokeColor=#4a148c;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="290" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="video-search" value="動画検索画面&#xa;&#xa;・月連番検索&#xa;・ライン絞込み&#xa;・期間指定&#xa;・作業キュー" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="340" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="labeling-ui" value="要素作業分析UI&#xa;&#xa;・動画再生&#xa;・AI候補区間&#xa;・タイムライン&#xa;・ラベル編集&#xa;・レビュー機能" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="340" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="analysis-report" value="分析レポート画面&#xa;&#xa;・要素作業時間&#xa;・ばらつき分析&#xa;・ボトルネック&#xa;・学習データ状況" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="520" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="admin-area" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=3;opacity=30;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="280" width="480" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="admin-label" value="運用管理者エリア" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" parent="1" vertex="1">
+                    <mxGeometry x="1280" y="290" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="device-management" value="端末管理画面&#xa;&#xa;・端末登録/更新&#xa;・ライン割当&#xa;・音声コマンド設定&#xa;・バッテリー監視" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1160" y="340" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="sequence-management" value="順序データ管理&#xa;&#xa;・CSV取り込み&#xa;・データ検証&#xa;・整合性チェック&#xa;・エラー管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1340" y="340" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="ops-dashboard" value="運用管理&#xa;ダッシュボード&#xa;&#xa;・システム監視&#xa;・リソース状況&#xa;・アラート管理&#xa;・稼働率" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1160" y="480" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-log" value="監査ログ閲覧&#xa;&#xa;・操作履歴&#xa;・権限変更&#xa;・アクセスログ&#xa;・セキュリティ監視" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1340" y="480" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-management" value="ユーザー・権限管理&#xa;&#xa;・ロール設定&#xa;・アクセス制御&#xa;・承認ワークフロー" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1250" y="620" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="shared-area" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=3;opacity=30;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="860" width="480" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="shared-label" value="共通画面エリア" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fillColor=#fff3e0;strokeColor=#e65100;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="870" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="notification" value="通知・アラート画面&#xa;&#xa;・リアルタイム通知&#xa;・アラート履歴&#xa;・設定管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="920" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="settings" value="システム設定画面&#xa;&#xa;・表示設定&#xa;・閾値設定&#xa;・データ保持期間&#xa;・プライバシー設定" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="920" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="help" value="ヘルプ・マニュアル&#xa;&#xa;・操作ガイド&#xa;・FAQ&#xa;・チュートリアル&#xa;・サポート連絡" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="920" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="login-to-supervisor" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#01579b;" parent="1" source="login" target="live-monitor" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="700" y="240" as="sourcePoint"/>
+                        <mxPoint x="750" y="190" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="760" y="250"/>
+                            <mxPoint x="190" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="login-to-supervisor-label" value="現場監督者" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;backgroundColor=#e1f5fe;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="240" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="login-to-analyst" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#4a148c;" parent="1" source="login" target="video-search" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="800" y="200" as="sourcePoint"/>
+                        <mxPoint x="850" y="150" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="800" y="250"/>
+                            <mxPoint x="710" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="login-to-analyst-label" value="分析担当者" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;backgroundColor=#f3e5f5;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="240" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="login-to-admin" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#2e7d32;" parent="1" source="login" target="ops-dashboard" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="840" y="200" as="sourcePoint"/>
+                        <mxPoint x="890" y="150" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="840" y="250"/>
+                            <mxPoint x="1230" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="login-to-admin-label" value="運用管理者" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;backgroundColor=#e8f5e8;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="240" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="supervisor-nav1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#01579b;jumpStyle=arc;" parent="1" source="live-monitor" target="event-monitor" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="270" y="380" as="sourcePoint"/>
+                        <mxPoint x="320" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="supervisor-nav1-label" value="詳細確認" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;backgroundColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="390" width="60" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="supervisor-nav2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#01579b;jumpStyle=arc;" parent="1" source="event-monitor" target="supervisor-report" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="470" as="sourcePoint"/>
+                        <mxPoint x="440" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="supervisor-nav2-label" value="レポート生成" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;backgroundColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="480" width="70" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="analyst-nav1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#4a148c;jumpStyle=arc;" parent="1" source="video-search" target="labeling-ui" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="790" y="380" as="sourcePoint"/>
+                        <mxPoint x="840" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="analyst-nav1-label" value="動画選択" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;backgroundColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="790" y="390" width="60" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="analyst-nav2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#4a148c;jumpStyle=arc;" parent="1" source="labeling-ui" target="analysis-report" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="890" y="470" as="sourcePoint"/>
+                        <mxPoint x="940" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="analyst-nav2-label" value="分析結果" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;backgroundColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="480" width="60" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="admin-nav1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#2e7d32;jumpStyle=arc;" parent="1" source="device-management" target="sequence-management" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1310" y="380" as="sourcePoint"/>
+                        <mxPoint x="1360" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-nav1-label" value="データ連携" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;backgroundColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1300" y="390" width="70" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="admin-nav2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#2e7d32;jumpStyle=arc;" parent="1" source="ops-dashboard" target="audit-log" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1310" y="530" as="sourcePoint"/>
+                        <mxPoint x="1360" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-nav2-label" value="詳細調査" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;backgroundColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1300" y="540" width="60" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="admin-nav3" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#2e7d32;jumpStyle=arc;" parent="1" source="audit-log" target="user-management" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1410" y="590" as="sourcePoint"/>
+                        <mxPoint x="1460" y="540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-nav3-label" value="権限管理" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;backgroundColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1380" y="600" width="60" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="to-notification1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#e65100;dashed=1;jumpStyle=arc;" parent="1" source="live-monitor" target="notification" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="190" y="470" as="sourcePoint"/>
+                        <mxPoint x="240" y="420" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="190" y="800"/>
+                            <mxPoint x="710" y="800"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="to-notification2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#e65100;dashed=1;jumpStyle=arc;" parent="1" source="ops-dashboard" target="notification" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1230" y="590" as="sourcePoint"/>
+                        <mxPoint x="1280" y="540" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1230" y="800"/>
+                            <mxPoint x="710" y="800"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="to-settings" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#e65100;dashed=1;jumpStyle=arc;" parent="1" source="user-management" target="settings" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1320" y="730" as="sourcePoint"/>
+                        <mxPoint x="1370" y="680" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1320" y="820"/>
+                            <mxPoint x="890" y="820"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="transition-notes" value="画面遷移の特徴&#xa;&#xa;• 実線矢印：主要な画面遷移&#xa;• 破線矢印：共通画面への遷移&#xa;• Line jumps：交差する矢印を明示&#xa;• 各ロール専用エリア内での主要業務フロー&#xa;• 通知・設定・ヘルプは全ロール共通アクセス" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="920" width="320" height="140" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
